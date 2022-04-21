@@ -7,6 +7,57 @@
     <title>Document</title>
   </head>
   <body>
-    <p>მიბაძვის მასტერკლასი მარიამთან ერთად</p>
+    <h1 class="Main">მიბაძვის მასტერკლასები მარიამთან ერთად</h1>
+    <div id="btn">
+      <button onclick="f()">Press To choose teacher </button>
+    </div>
+    <div id="photo">
+    </div>
   </body>
 </html>
+<style>
+  @media only screen and (max-width: 1200px) {
+    body{
+      transform: scale(0.9);
+    }
+  }
+  div{
+    margin: auto;
+  }
+  .Main{
+    text-align: center;
+  }
+  #photo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    top: 30px;
+  }
+  .title,button{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #btn{
+    text-align: center;
+  }
+  img {
+    border-radius: 20%;
+  }
+</style>
+<script>
+  function f() {
+    let div = document.querySelector("#photo");
+    let link = "https://scontent.ftbs5-2.fna.fbcdn.net/v/t39.30808-6/273964568_1892264597625976_7378932481851102025_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHF-JtgEFI2Kki45CETDDGVKd34vZTr7XYp3fi9lOvtdgCaQHFLYetb2Ih7hKnktpAmgozFoI3SS2OWFojFlXNI&_nc_ohc=nNkt625EHrEAX9fXT5A&_nc_ht=scontent.ftbs5-2.fna&oh=00_AT_tXuj2b2g_wEen4MOanOg8vWq6baftBV279av_XgFZbw&oe=62677140";
+    let link1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-5Szp-PlSC10aymzEuqOCdYd6E_AxGyMiqifZ1p5B5D9QSUonCcNzRef32PiZwLKw16Q&usqp=CAU";
+    div.innerHTML = '<div><p class="title">Teacher Number 1(Current Best): </p><br> <img onclick="f1()" src="'+link+'" alt="photo" width="300px"></div>'
+      +'<div><p class="title">Teacher Number 2: </p><img onclick="f2()" src="'+link1+'" alt="photo" width="300px"></div>';
+    
+  }
+  function f1() {
+    alert("Very good Choice");
+  }
+  function f2() {
+    alert("Coming Soon");
+  }
+</script>
